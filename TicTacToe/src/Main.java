@@ -24,7 +24,7 @@ class Main
             if(board[row][col]==' ')
             {
                 board[row][col]=player;//Place the element
-                gameOver==haveWon(board,player);
+                gameOver=haveWon(board,player);
                 if(gameOver)
                 {
                     System.out.println("player "+player+" has won: ");
@@ -67,7 +67,7 @@ class Main
     {
         for(int row=0;row<board.length;row++)
         {
-            for(int col=0;col<board[row].length;row++)
+            for(int col=0;col<board[row].length;col++)
             {
                 System.out.print(board[row][col] + " | ");
             }
