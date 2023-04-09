@@ -30,7 +30,7 @@ class Main
                     System.out.println("player "+player+" has won: ");
                 }else
                 {
-                    player=(player=='X')?'O':'x';
+                    player=(player=='X')?'O':'X';
                 }
             }else
             {
