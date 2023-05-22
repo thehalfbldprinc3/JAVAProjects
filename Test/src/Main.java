@@ -1,28 +1,23 @@
-import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
-    static int[] insertionSort(int[] arr)
-        {
-            int key;
-            for(int i=2;i< arr.length;i++)
-            {
-                key=arr[i];
-                int j=i-1;
-                while(j>0&&arr[j]>key)
-                {
-                    arr[j+1]=arr[j];
-                    j=j-1;
 
-                }
-                arr[j+1]=key;
-            }
-        return arr;
-        }
 
-    public static void main(String[] args)
-    {
-        int[] array ={2,7,5,9,3,4,6};
-        insertionSort(array);
-        System.out.print(Arrays.toString(array));
+    public static void main(String[] args) {
+        Scanner sc =new Scanner(System.in);
+        int m1,m2,m3;
+
+
+        String str=sc.next();
+
+        char ch=str.charAt(0);
+        m1=sc.nextInt();
+        m2=sc.nextInt();
+        m3=sc.nextInt();
+        int avg=(m1+m2+m3)/3;
+
+        System.out.println(ch);
+        System.out.println(avg);
     }
+
 }
