@@ -178,6 +178,62 @@ public class Patterns
             System.out.println();
         }
     }
+    public static void invertedTriangle(int n)
+    {
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<n-i;j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+    public static void invertedNumberTriangle(int n)
+    {
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<n-i;j++)
+            {
+                System.out.print(n-i);
+            }
+            System.out.println();
+        }
+    }
+    public static void MirrorTriangle(int n)
+    {
+        for(int i=0;i<n+2;i++)
+        {
+            for(int j=0;j<n;j++)
+            {
+                if(i+j<n+1)
+                {
+                    System.out.print(" ");
+                }else
+                {
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+        }
+    }
+    public static void MirrorNumberTriangle(int n)
+    {
+        for(int i=0;i<n+2;i++)
+        {
+            for(int j=0;j<n;j++)
+            {
+                if(i+j<n+1)
+                {
+                    System.out.print(" ");
+                }else
+                {
+                    System.out.print(i-(n-j));
+                }
+            }
+            System.out.println();
+        }
+    }
     public static void main(String[] args)
     {
         Scanner sc=new Scanner(System.in);
@@ -211,5 +267,13 @@ public class Patterns
         revAlphaTriangularPattern(n);
         System.out.println();
         interestingAlphabet(n);
+        System.out.println();
+        invertedTriangle(n);
+        System.out.println();
+        invertedNumberTriangle(n);
+        System.out.println();
+        MirrorTriangle(n);
+        System.out.println();
+        MirrorNumberTriangle(n);
     }
 }
