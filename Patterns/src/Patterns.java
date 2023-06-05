@@ -234,6 +234,161 @@ public class Patterns
             System.out.println();
         }
     }
+    public static void NumberIsoTriangle(int n)
+    {
+        int i =1;
+        while(i<=n) {
+            int spaces = 1;
+            while (spaces <= n - i) {
+                System.out.print(" ");
+                spaces++;
+            }
+            int num = 1;
+            while (num <= i) {
+                System.out.print(num);
+                num++;
+            }
+            int dec=i-1;
+            while(dec>=1)
+            {
+                System.out.print(dec);
+                dec--;
+            }
+            System.out.println();
+            i++;
+        }
+    }
+    public static void starIsoTriangle(int n)
+    {
+        int i =1;
+        while(i<=n)
+        {
+            int spaces = 1;
+            while (spaces <= n - i)
+            {
+                System.out.print(" ");
+                spaces++;
+            }
+            int num = 1;
+            while (num <= i)
+            {
+                System.out.print("*");
+                num++;
+            }
+            int dec=i-1;
+            while(dec>=1)
+            {
+                System.out.print("*");
+                dec--;
+            }
+            System.out.println();
+            i++;
+        }
+    }
+    public static void numberTriangleIsc(int n)
+    {
+        int i;
+        int j;
+        int num=1;
+        int gap=n-1;
+        for (j=1;j<=n;j++)
+        {
+            num=j;
+            for (i=1;i<=gap;i++)
+                System.out.print(" ");
+            gap--;
+            for (i=1;i<=j;i++)
+            {
+                System.out.print(num);
+                num++;
+            }
+            num--;
+            num--;
+            for (i=1;i<j;i++)
+            {
+                System.out.print(num);
+                num--;
+            }
+            System.out.println();
+        }
+    }
+    public static void starDiamond(int n)
+    {
+        int i =1;
+        while(i<=n-3)
+        {
+            int spaces = 1;
+            while (spaces <= n - i)
+            {
+                System.out.print(" ");
+                spaces++;
+            }
+            int num = 1;
+            while (num <= i)
+            {
+                System.out.print("*");
+                num++;
+            }
+            int dec=i-1;
+            while(dec>=1)
+            {
+                System.out.print("*");
+                dec--;
+            }
+            System.out.println();
+            i++;
+        }
+        {
+            int k = n - 3;
+            while (i >= 1) {
+                int spaces = n - i;
+                while (spaces >= 1) {
+                    System.out.print(" ");
+                    spaces--;
+                }
+                int num = i;
+                while (num >= 1) {
+                    System.out.print("*");
+                    num--;
+                }
+                int dec = 1;
+                while (dec <= i - 1) {
+                    System.out.print("*");
+                    dec++;
+                }
+                System.out.println();
+                i--;
+            }
+        }
+    }
+    public static void starParallelogram(int n)
+    {
+        for(int i=1;i<=n;i++) {
+            for (int j=1;j<=i-1;j++)
+                System.out.print(" ");
+            for (int j=1;j<=n;j++)
+                System.out.print("*");
+            System.out.println();
+        }
+    }
+    public static void TriangularSum(int n)
+    {
+        for(int i =0;i<n;i++)
+        {int sum=0;
+            for(int j=1;j<=i+1;j++)
+            {
+                if(j==1)
+                {
+                    System.out.print((j));
+                }else {
+                    System.out.print("+" + (j));
+                }
+            }
+            sum=1+sum+(i*(i+1)/2)+i;
+            System.out.print("="+sum);
+            System.out.println();
+        }
+    }
     public static void main(String[] args)
     {
         Scanner sc=new Scanner(System.in);
@@ -275,5 +430,17 @@ public class Patterns
         MirrorTriangle(n);
         System.out.println();
         MirrorNumberTriangle(n);
+        System.out.println();
+        NumberIsoTriangle(n);
+        System.out.println();
+        starIsoTriangle(n);
+        System.out.println();
+        numberTriangleIsc(n);
+        System.out.println();
+        starDiamond(n);
+        System.out.println();
+        starParallelogram(n);
+        System.out.println();
+        TriangularSum(n);
     }
 }
