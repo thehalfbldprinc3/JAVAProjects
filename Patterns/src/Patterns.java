@@ -50,7 +50,7 @@ public class Patterns
         }
     }
     public static void TriangularNum(int n)
-        {
+    {
             for(int i =0;i<n+1;i++)
             {
                 for(int j=0;j<i;j++)
@@ -59,9 +59,9 @@ public class Patterns
                 }
                 System.out.println();
             }
-        }
-        public static void triangularNumCTD(int n)
-        {
+    }
+    public static void triangularNumCTD(int n)
+    {
             int m=1;
 
             for (int i = 0; i <n+1; i++)
@@ -73,9 +73,9 @@ public class Patterns
                 }
                 System.out.println();
             }
-        }
-        public static void TriangularUneven(int n)
-        {
+    }
+    public static void TriangularUneven(int n)
+    {
             for(int i=0;i<n+1;i++)
             {
                 int k=i;
@@ -315,7 +315,7 @@ public class Patterns
     public static void starDiamond(int n)
     {
         int i =1;
-        while(i<=n-3)
+        while(i<=n)
         {
             int spaces = 1;
             while (spaces <= n - i)
@@ -339,25 +339,25 @@ public class Patterns
             i++;
         }
         {
-            int k = n - 3;
-            while (i >= 1) {
-                int spaces = n - i;
+            int k = n;
+            while (k >= 1) {
+                int spaces = n - k;
                 while (spaces >= 1) {
                     System.out.print(" ");
                     spaces--;
                 }
-                int num = i;
+                int num = k;
                 while (num >= 1) {
                     System.out.print("*");
                     num--;
                 }
                 int dec = 1;
-                while (dec <= i - 1) {
+                while (dec <= k - 1) {
                     System.out.print("*");
                     dec++;
                 }
                 System.out.println();
-                i--;
+                k--;
             }
         }
     }
@@ -389,10 +389,103 @@ public class Patterns
             System.out.println();
         }
     }
+    public static void OddSquare(int n)
+    {
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<n;j++)
+            {
+                System.out.print(2*i+(2*j+1)+ " ");
+            }
+            System.out.println();
+        }
+    }
+    public static void HalfDiamondPattern(int n)
+    {
+        if (n == 0) {
+
+        } else {
+            int i = 0;
+            while (i <= n) {
+                int num = 1;
+                while (num <= i + 1) {
+                    if (num == ((2 * i) + 1) || num == 1) {
+                        System.out.print("*");
+                    } else {
+                        System.out.print(num - 1);
+                    }
+                    num++;
+                }
+                int dec = i - 1;
+                while (dec >= 0) {
+                    if (dec == ((2 * i) + 1) || dec == 0) {
+                        System.out.print("*");
+                    } else {
+                        System.out.print(dec);
+                    }
+                    dec--;
+                }
+                System.out.println();
+                i++;
+            }
+
+            int k = n - 1;
+            while (k >= 0) {
+                int num = 1;
+                while (num <= k + 1) {
+                    if (num == ((2 * i) + 1) || num == 1) {
+                        System.out.print("*");
+                    } else {
+                        System.out.print(num - 1);
+                    }
+                    num++;
+                }
+                int dec = k - 1;
+                while (dec >= 0) {
+                    if (dec == ((2 * i) + 1) || dec == 0) {
+                        System.out.print("*");
+                    } else {
+                        System.out.print(dec);
+                    }
+                    dec--;
+                }
+                System.out.println();
+                k--;
+            }
+
+        }
+    }
+    public static void numberStarPattern(int n)
+    {
+        for(int i=0;i<n;i++)
+        {
+            for(int j=n;j>0;j--)
+            {
+                if(j-1==i)
+                {
+                    System.out.print("* ");
+                }else {
+                    System.out.print(j + " ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    public static void starIsoTriangleReversed(int n)
+    {
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<n;j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
     public static void main(String[] args)
     {
         Scanner sc=new Scanner(System.in);
-        int n=sc.nextInt();
+          int n=sc.nextInt();
         simpleSquare(n);
         System.out.println();
         NumberRow(n);
@@ -442,5 +535,13 @@ public class Patterns
         starParallelogram(n);
         System.out.println();
         TriangularSum(n);
+        System.out.println();
+        OddSquare(n);
+        System.out.println();
+        HalfDiamondPattern(n);
+        System.out.println();
+        numberStarPattern(n);
+        System.out.println();
+        starIsoTriangleReversed(n);
     }
 }

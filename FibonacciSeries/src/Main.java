@@ -10,9 +10,10 @@ public class Main
         int Terms=sc.nextInt();
         int Proxy;
         int c=0;
-        for(int i=0;i<Terms;i++)
+        System.out.print("0 ");
+        for(int i=0;i<Terms-1;i++)
         {
-            System.out.print(c+ " ");
+            System.out.print(b+ " ");
             c=a+b;
             Proxy=b;
             b=c;
